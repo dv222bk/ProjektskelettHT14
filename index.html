@@ -43,11 +43,24 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>CSS</h1>
-					<h3>Attribute Selectors</h3>
-					<p>
-						<small>Presenterat av: Daniel Vedin (dv222bk)</small>
-					</p>
+					<section>
+						<h1>CSS</h1>
+						<h3>Attribute Selectors</h3>
+						<p>
+							<small>Presenterat av: Daniel Vedin (dv222bk)</small>
+						</p>
+					</section>
+					
+					<section>
+						<h2>Daniel Vedin</h2>
+						<ul>
+							<li>22 år</li>
+							<li>Bor i Skara, tidigare Göteborg</li>
+							<li>Har tidigare studerat Webbredaktör vid Högskolan i Borås, på distans</li>
+							<li>Läste Digital Produktion på Portalens Gymnasium i Göteborg</li>
+							<li>Gillar alla typer av spel</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
@@ -74,9 +87,21 @@ a[href="http://google.se"] {
 				</section>
 
 				<section>
+					<h2>Egna attribut</h2>
+					<pre><code data-trim contenteditable>
+<a href="../../index.html" go-to="homepage">Homepage</a>
+					</code></pre>
+					<pre class="fragment roll-in"><code data-trim contenteditable>
+a[go-to="homepage"] {
+	font-size: 3000px;
+}
+					</code></pre>
+				</section>
+
+				<section>
 					<h2>Regex Attribut Selectorer</h2>
 					<pre><code data-trim contenteditable>
-a[href*="Google"] {
+a[href*="google"] {
 	background-color: green;
 }
 
@@ -86,18 +111,6 @@ a[href^="http"] {
 
 img[src$=".jpg"] {
 	border-bottom: 5px dotted blue;
-}
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Egna attribut</h2>
-					<pre><code data-trim contenteditable>
-<a href="../../index.html" go-to="homepage">Homepage</a>
-					</code></pre>
-					<pre class="fragment roll-in"><code data-trim contenteditable>
-a[go-to="homepage"] {
-	font-size: 3000px;
 }
 					</code></pre>
 				</section>
