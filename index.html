@@ -84,6 +84,9 @@ a[href="http://google.se"] {
 	font-size: 25em;
 }
 					</code></pre>
+					<p>
+						Funkar i alla moderna webbläsare.... och IE7+.
+					</p>
 				</section>
 
 				<section data-background="#5D2082" data-background-transition="none">
@@ -118,16 +121,57 @@ img[src$=".jpg"] {
 				<section data-background="#5D2082" data-background-transition="none">
 					<h2>Tilda (~) selectorn</h2>
 					<pre><code data-trim contenteditable>
-<img src="images/pic1.png" title="stad hus vatten" />
-<img src="images/pic2.png" title="båt vatten sol" />
-<img src="images/pic3.png" title="hus väg bil" />
+<img src="images/pic1.png" tags="stad hus vatten" />
+<img src="images/pic2.png" tags="båt vatten sol" />
+<img src="images/pic3.png" tags="hus väg bil" />
 					</code></pre>
 					<pre class="fragment roll-in"><code data-trim contenteditable>
-img[title~="vatten"] {
+img[tags~="vatten"] {
 	border: 5px groove blue;
 }
-img[title~="hus"] {
+
+img[tags~="hus"] {
 	border-radius: 5px;
+}
+					</code></pre>
+				</section>
+				
+				<section data-background="#5D2082" data-background-transition="none">
+					<h2>"|" selectorn</h2>
+					<pre><code data-trim contenteditable>
+<img src="images/pic1.png" tags="stad-hus-vatten" />
+<img src="images/pic2.png" tags="båt-vatten-sol" />
+<img src="images/pic3.png" tags="hus-väg-bil" />
+					</code></pre>
+					<div class="fragment roll-in">
+						<pre><code data-trim contenteditable>
+img[tags|="båt"] {
+	border: 5px groove blue;
+}
+
+img[tags|="hus"] {
+	border-radius: 5px;
+}
+						</code></pre>
+						<p>
+							OBS: Träffar bara första ordet och bara om det är stavat på exakt samma sätt. "båt" träffar till exempel inte "båtar"
+						</p>
+					</div>
+				</section>
+				
+				<section data-background="#5D2082" data-background-transition="none">
+					<h2>Flera Attribut Selectorer</h2>
+					<pre><code data-trim contenteditable>
+<img src="images/pic1.png" tags="vatten" alt="En bild på vatten" />
+<img src="images/pic2.png" tags="vatten" />
+					</code></pre>
+					<pre class="fragment roll-in"><code data-trim contenteditable>
+img[tags~="vatten"] {
+	border: 5px groove blue;
+}
+
+img[tags~="vatten"][alt] {
+	border: 20px groove blue;
 }
 					</code></pre>
 				</section>
